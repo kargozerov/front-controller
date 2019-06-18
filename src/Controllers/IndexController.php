@@ -33,5 +33,5 @@ class IndexController
         ob_end_clean();
         return $page;
     }
-
 }
+

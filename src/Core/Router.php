@@ -9,7 +9,7 @@ class Router
         $controller='Index';
         $action='index';
         $params=null;
-        ///info/contacts
+        ///info/contacts/1
         //['', 'info', 'contacts']
         // Для примера возьмем запрос /info/rules (по аналогии будут обработаны и остальные запросы)
         $routes=explode('/',$_SERVER['REQUEST_URI']); // разбивает запрос по /, формирует массив

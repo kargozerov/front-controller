@@ -1,0 +1,6 @@
+class PictureController
+    private $pictureRepository;
+
+function showAction($id){
+    $picture = $this->pictureRepository->getById($id);
+}
