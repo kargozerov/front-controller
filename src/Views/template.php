@@ -12,6 +12,8 @@
     <ul>
         <li><a href="/">Главная</a></li>
         <li><a href="/info/rules">Правила</a></li>
+        <li><a href="/info/contacts">Контакты</a></li>
+        <li><a href="/article/show">Статьи</a></li>
     </ul>
 </nav>
 

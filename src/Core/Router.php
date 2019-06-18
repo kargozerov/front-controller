@@ -9,11 +9,14 @@ class Router
         $controller='Index';
         $action='index';
         $params=null;
+        ///info/contacts
+        //['', 'info', 'contacts']
         // Для примера возьмем запрос /info/rules (по аналогии будут обработаны и остальные запросы)
         $routes=explode('/',$_SERVER['REQUEST_URI']); // разбивает запрос по /, формирует массив
         // тогда мы получим массив вида: ['', 'info', 'rules']
 
         // имя класса контроллера
+        //['', 'info', 'contacts']
         if (!empty($routes[1])){ // если первый елемент массива не empty
             $controller=$routes[1]; // присваеваем переменной $controller значение первого элемента массива
             // $controller = info
@@ -22,6 +25,7 @@ class Router
         if (!empty($routes[2])){ // если второй елемент массива не empty
             $action=$routes[2]; // присваеваем переменной $action значение второго элемента массива
             // $action = rules
+            // $action = contacts
         }
         //параметры
         if (!empty($routes[3])){ // если третий елемент массива не empty

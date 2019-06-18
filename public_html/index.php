@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__.'/../src/Controllers/IndexController.php';
 require_once __DIR__.'/../src/Controllers/InfoController.php';
+require_once __DIR__.'/../src/Controllers/ArticleController.php';
 require_once  __DIR__.'/../src/Core/Router.php';
 
 // все запросы от клинта будут перенаправлены на данную страницу
