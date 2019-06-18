@@ -1,14 +1,23 @@
 <?php
-
+require_once __DIR__ . '/../Models/PictureRepository.php';
 
 class IndexController
 {
+    private $pictureRepository;
+
+    public function __construct()
+    {
+        $this->pictureRepository = new PictureRepository();
+    }
+
     public function indexAction(){
         echo "Генерация главной страницы";
         $content='main.php';
         $template='template.php';
+        $pictures = $this->pictureRepository->getAll();
         $data=[
-            'title'=>'Главная'
+            'title'=>'Главная',
+            'pictures' => $pictures
         ];
         //вывели страничку $page
         echo $this->renderPage($content,$template,$data);
