@@ -1,15 +1,21 @@
 <?php
-require_once __DIR__.'/../src/Controllers/IndexController.php';
-require_once __DIR__.'/../src/Controllers/InfoController.php';
-require_once __DIR__.'/../src/Controllers/ArticleController.php';
-require_once  __DIR__.'/../src/Core/Router.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+use Web\FrontController\Core\Router;
+
+Router::run();
+
+
+//require_once __DIR__.'/../src/Controllers/IndexController.php';
+//require_once __DIR__.'/../src/Controllers/InfoController.php';
+//require_once __DIR__.'/../src/Controllers/ArticleController.php';
+//require_once  __DIR__.'/../src/Core/Router.php';
 
 // все запросы от клинта будут перенаправлены на данную страницу
 
 // запуск статического метода run() класса Router
 // маршрутизатор обрабатывает запросы исходя из следующего правила: /имя_контроллера/имя_метода/данные
 
-Router::run();
+
 
 //принцип работы роутера
 /*if ($uri=='/'){

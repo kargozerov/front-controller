@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/../Core/Repository.php';
-require_once __DIR__ . '/../Models/Picture.php';
+namespace Web\FrontController\Models;
+
+use Web\FrontController\Core\Repository;
+use Web\FrontController\Models\Picture;
 
 class PictureRepository implements Repository
 {

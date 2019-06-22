@@ -1,4 +1,5 @@
 <?php
+namespace Web\FrontController\Core;
 
 interface Repository
 {

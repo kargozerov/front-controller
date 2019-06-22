@@ -1,5 +1,5 @@
 <?php
-
+namespace Web\FrontController\Core;
 
 class Router
 {
@@ -32,7 +32,7 @@ class Router
             $params=$routes[3]; // присваеваем переменной $params значение третьего элемента массива
         }
 
-        $controller=ucfirst(strtolower($controller)).'Controller'; // формируем имя класса контроллера
+        $controller= 'Web\FrontController\Controllers\\' . ucfirst(strtolower($controller)).'Controller'; // формируем имя класса контроллера
         // $controller = 'InfoController'
         $action=strtolower($action).'Action'; // формируем имя метода
         // $action = 'rulesAction'

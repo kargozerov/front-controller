@@ -1,5 +1,5 @@
 <?php
-
+namespace Web\FrontController\Controllers;
 
 class InfoController
 {

@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . '/../Models/PictureRepository.php';
+namespace Web\FrontController\Controllers;
+
+use Web\FrontController\Models\PictureRepository;
 
 class IndexController
 {

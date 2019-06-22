@@ -1,5 +1,6 @@
 <?php
-// entity
+namespace Web\FrontController\Models;
+
 class Picture
 {
     private $id;
