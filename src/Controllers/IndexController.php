@@ -17,6 +17,7 @@ class IndexController
         $content='main.php';
         $template='template.php';
         $pictures = $this->pictureRepository->getAll();
+//        var_dump($pictures);
         $data=[
             'title'=>'Главная',
             'pictures' => $pictures

@@ -15,6 +15,7 @@
         <li><a href="/info/rules">Правила</a></li>
         <li><a href="/info/contacts">Контакты</a></li>
         <li><a href="/article/show">Статьи</a></li>
+        <li><a href="/picture/add">Добавить картину</a></li>
     </ul>
 </nav>
 

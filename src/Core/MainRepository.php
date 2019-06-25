@@ -36,5 +36,8 @@ class MainRepository implements Repository
             basename(str_replace('\\', '/', $this->class)) .
             ' WHERE id=:id';
         return $this->db->paramsGetOne($sql, ['id'=>$id], $this->class);
+
+//        public_html -> css -> Front.css
+//        public_html -> js -> Admin.js
     }
 }

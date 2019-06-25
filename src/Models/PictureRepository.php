@@ -1,35 +1,39 @@
 <?php
 namespace Web\FrontController\Models;
 
+use Web\FrontController\Core\DB;
 use Web\FrontController\Core\Repository;
 use Web\FrontController\Models\Picture;
 
 class PictureRepository implements Repository
 {
-    private $pictures = [];
+    private $db;
     public function __construct()
     {
-        $this->pictures = [
-            new Picture(1, 'Picture 1', 'description', ['Chrysanthemum.jpg', 'Chrysanthemum.jpg']),
-            new Picture(2, 'Picture 2', 'description', ['Koala.jpg', 'Koala.jpg']),
-            new Picture(3, 'Picture 3', 'description', ['Tulips.jpg', 'Tulips.jpg']),
-            new Picture(4, 'Picture 4', 'description', ['Desert.jpg', 'Desert.jpg']),
-        ];
+        $this->db = DB::getDB();
     }
 
     public function getAll()
     {
         // возвращает все картины
-        return $this->pictures;
+        $sql = 'SELECT * FROM Picture';
+        return $this->db->getAll($sql);
     }
 
     public function getById(int $id)
     {
-        foreach ($this->pictures as $picture){
-            if ($id == $picture->getId()){
-                return $picture;
-            }
-        }
+        // получаем картину по id
+        $sql = 'SELECT * FROM Picture WHERE id=:id';
+        $params = ['id'=>$id];
+        return $this->db->paramsGetOne($sql, $params);
+    }
+
+    public function save($params)
+    {
+        $sql = 'INSERT INTO Picture 
+                (title, description, img, yearCreated)
+                VALUES (:title, :description, :img, :yearCreated)';
+        return $this->db->nonSelectQuery($sql, $params);
     }
 
 }
