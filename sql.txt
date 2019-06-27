@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS `frontcontroller`.`User` (
 ENGINE = InnoDB;
 
 INSERT into `frontcontroller`.`User` (email, `name`, hash, phone, role)
-VALUES ('admin@admin.com', 'Painter', '$2y$10$m53hJER8S0YyUA2NJM4eN.eKehhlcYUo3Lr7PVkJFfsDIAGs.Xx5S', '+7(999)999-99-99');
+VALUES ('admin@admin.com', 'Painter', '$2y$10$m53hJER8S0YyUA2NJM4eN.eKehhlcYUo3Lr7PVkJFfsDIAGs.Xx5S', '+7(999)999-99-99', 'ADMIN');
 пароль admin
