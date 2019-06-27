@@ -14,13 +14,9 @@ class PictureController extends Controller
 //    запрос /picture/add
     public function addAction(){
         if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-            // если get запрос, отображаем форму
-            $data = [
-                'title'=>'Добавление картины'
-            ];
-            echo parent::renderPage('add_picture.php',
-                'template.php', $data);
-        } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            header('Location: /');
+        } else
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // если post запрос, обрабатываем данные
             $post = $_POST;
             $files = $_FILES;
@@ -40,7 +36,7 @@ class PictureController extends Controller
                 'title'=>'Добавление картины',
                 'addResult' => $addResult
             ];
-            echo parent::renderPage('add_picture.php',
+            echo parent::renderPage('admin_account.php',
                 'template.php', $data);
 
         }
@@ -49,7 +45,6 @@ class PictureController extends Controller
 
     public function showAction($id) {
         $picture = $this->pictureRepository->getById($id);
-        var_dump($picture);
         $data = [
             'title'=>$picture['title'],
             'picture' => $picture

@@ -1,11 +1,13 @@
 <?php
 namespace Web\FrontController\Controllers;
 
-class InfoController
+use Web\FrontController\Core\Controller;
+
+class InfoController extends Controller
 {
 
     public function rulesAction(){
-        echo "Генерация страницы с правилами покупки картин";
+//        echo "Генерация страницы с правилами покупки картин";
         $content='rules.php'; // имя файла с контентом
         $template='template.php'; // имя шаблона, в который будем вставлять контент
         $data=[
@@ -17,7 +19,7 @@ class InfoController
 }
 
     public function contactsAction(){
-         echo "Генерация страницы с контактами";
+//         echo "Генерация страницы с контактами";
         $content='contacts.php'; // имя файла с контентом
         $template='template.php'; // имя шаблона, в который будем вставлять контент
         $data=[
