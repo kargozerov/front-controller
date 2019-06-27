@@ -11,12 +11,13 @@ class PictureController extends Controller
         $this->pictureRepository = new PictureRepository();
     }
 
-//    запрос /picture/add
+//    запрос /article/add
     public function addAction(){
         if ($_SERVER['REQUEST_METHOD'] == 'GET'){
             header('Location: /');
         } else
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                session_start();
             // если post запрос, обрабатываем данные
             $post = $_POST;
             $files = $_FILES;
@@ -34,7 +35,8 @@ class PictureController extends Controller
 
             $data = [
                 'title'=>'Добавление картины',
-                'addResult' => $addResult
+                'addResult' => $addResult,
+                'auth' => isset($_SESSION['name'])
             ];
             echo parent::renderPage('admin_account.php',
                 'template.php', $data);

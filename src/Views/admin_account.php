@@ -1,4 +1,4 @@
-<h2>Личный кабинет администратора (художника)</h2>
+<h2><?php echo $name?>, добро пожаловать в личный кабинет</h2>
 
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">

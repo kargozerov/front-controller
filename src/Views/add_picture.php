@@ -6,11 +6,11 @@
 
 <form method="post" action="/picture/add" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="title">Название статьи</label>
+        <label for="title">Название картины</label>
         <input type="text" class="form-control" id="title" name="title" placeholder="название" required>
     </div>
     <div class="form-group">
-        <label for="description">Описание статьи</label>
+        <label for="description">Описание картины</label>
         <textarea class="form-control" id="description" name="description" placeholder="описание" required></textarea>
     </div>
     <div class="form-group">

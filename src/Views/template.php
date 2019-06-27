@@ -38,13 +38,13 @@
                 <a class="nav-link" href="/info/contacts">Контакты</a>
             </li>
         </ul>
-<!--        --><?php //if ($auth):?>
-<!--            <ul class="navbar-nav justify-content-end">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="/account/logout">Выйти</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        --><?php //else: ?>
+        <?php if ($auth):?>
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/logout">Выйти</a>
+                </li>
+            </ul>
+        <?php else: ?>
             <form method="post" action="/account/auth" class="form-inline my-2 my-lg-0">
                 <input name="email" class="form-control mr-sm-2" type="email" placeholder="e-mail">
                 <input name="password" class="form-control mr-sm-2" type="password" placeholder="password">
@@ -55,7 +55,7 @@
                     <a class="nav-link" href="/account/registration">Регистрация</a>
                 </li>
             </ul>
-<!--        --><?php // endif;?>
+        <?php  endif;?>
 
 
 
